@@ -1,0 +1,41 @@
+# Created By FannSky | Sky Studio #
+
+SUNNOVA:
+  base:
+    material: DIAMOND_SWORD
+    custom-model-data: 8201.0
+    ability:
+      ability1:
+        type: SUN_FIST
+        mode: LEFT_CLICK
+        cooldown: 0.5
+      ability2:
+        type: SUNNOVA_DASH
+        mode: RIGHT_CLICK
+        cooldown: 5.0
+      ability3:
+        type: CELESTIAL_FIST
+        mode: SNEAK
+        cooldown: 5.0
+      ability4:
+        type: SUN_GOD_FLASH
+        mode: SHIFT_RIGHT_CLICK
+        cooldown: 10.0
+      ability5:
+        type: SUN_GOD_TRANSFORMATION
+        mode: SHIFT_LEFT_CLICK
+        cooldown: 15.0
+      ability6:
+        type: SHINING
+        mode: TIMER
+        timer: 10.0
+    unbreakable: true
+    disable-attack-passive: true
+    name: <gradient:#e78b15:#e7da15:#e78b15>Shining Gauntlet
+    displayed-type: <gradient:#e78b15:#e7da15:#e78b15>sunnova
+    attack-damage: 2.0
+    attack-speed: 0.5
+    lore:
+    - <gradient:#e78b15:#e7da15:#e78b15>The Power Of Shining
+  
+# Created By FannSky | Sky Studio #

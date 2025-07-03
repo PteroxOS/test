@@ -1,0 +1,29 @@
+SHINING:
+    mythicmobs-skill-id: Shining
+    modifiers:
+    - duration
+
+SUN_FIST:
+    mythicmobs-skill-id: Sun_Fist_Slash
+    modifiers:
+    - damage
+
+SUNNOVA_DASH:
+    mythicmobs-skill-id: Sunnova_Dash
+    modifiers:
+    - damage
+
+CELESTIAL_FIST:
+    mythicmobs-skill-id: Celestial_Fist
+    modifiers:
+    - damage
+
+SUN_GOD_FLASH:
+    mythicmobs-skill-id: Sun_God_Flash
+    modifiers:
+    - damage
+
+SUN_GOD_TRANSFORMATION:
+    mythicmobs-skill-id: Sun_God_Transformation
+    modifiers:
+    - damage

@@ -1,0 +1,56 @@
+{
+    "fann.sunova_punch": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunova_punch"
+      ]
+    },
+    "fann.sunnova_dash": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_dash"
+      ]
+    },
+    "fann.sunnova_impact": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_impact"
+      ]
+    },
+    "fann.sunnova_celestial_fist": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_celestial_fist"
+      ]
+    },
+    "fann.sunnova_transformation": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_transformation"
+      ]
+    },
+    "fann.sunnova_fist_god": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_fist_god"
+      ]
+    },
+    "fann.sunnova_fist_god_2": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_fist_god_2"
+      ]
+    },
+    "fann.sunnova_god_impact": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_god_impact"
+      ]
+    },
+    "fann.sunnova_god_thunder": {
+      "category": "master",
+      "sounds": [
+        "sunnova:fann/sunnova/sunnova_god_thunder"
+      ]
+    }
+}

@@ -1,0 +1,682 @@
+Sun_Fist_Slash_1:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sun_fist_slash_1;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=slash_1;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+Sun_Fist_Slash_2:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sun_fist_slash_1;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=slash_2;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=sun_fist_slash_1;p=bone;nm=sun_fist_slash_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+fx_sunnova_dash:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_dash_1;lockpitch=true;scale=3} @self ~onSpawn
+  - state{s=skills_dash;sp=1.2} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=fx_sunnova_dash_1;p=bone;nm=fx_sunnova_dash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_dash_1;p=bone;nm=fx_sunnova_dash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_dash_1;p=bone;nm=fx_sunnova_dash_4;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_dash_1;p=bone;nm=fx_sunnova_dash_5;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=9} @self ~onSpawn
+
+fx_sunnova_thunder:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_thunder_1;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=skills;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_7;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_8;np=bone;delay=7} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_9;np=bone;delay=8} @self ~onSpawn
+  - remove{delay=9} @self ~onSpawn
+
+fx_sunnova_thunder_small:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_thunder_1;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=skills;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_7;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_8;np=bone;delay=7} @self ~onSpawn
+  - changepart{m=fx_sunnova_thunder_1;p=bone;nm=fx_sunnova_thunder_9;np=bone;delay=8} @self ~onSpawn
+  - remove{delay=9} @self ~onSpawn
+
+fx_sunnova_dashess:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=dash_vfx;lockpitch=true;scale=1} @self ~onSpawn
+  - state{s=skills;sp=1.5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+VFX_Impact_Sunnova:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=vfx_sunnova_impact_1;lockpitch=true} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - state{s=skill} @self ~onSpawn
+  - changepart{m=vfx_sunnova_impact_1;p=body;nm=vfx_sunnova_impact_2;np=body;delay=2} @self ~onSpawn
+  - changepart{m=vfx_sunnova_impact_1;p=body;nm=vfx_sunnova_impact_3;np=body;delay=4} @self ~onSpawn
+  - changepart{m=vfx_sunnova_impact_1;p=body;nm=vfx_sunnova_impact_4;np=body;delay=6} @self ~onSpawn
+  - changepart{m=vfx_sunnova_impact_1;p=body;nm=vfx_sunnova_impact_5;np=body;delay=8} @self ~onSpawn
+  - changepart{m=vfx_sunnova_impact_1;p=body;nm=vfx_sunnova_impact_6;np=body;delay=10} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_impact_ground:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_impact_ground_1;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=skills;sp=1} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_4;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_5;np=bone;delay=7} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_6;np=bone;delay=9} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_7;np=bone;delay=11} @self ~onSpawn
+  - remove{delay=13} @self ~onSpawn
+
+fx_ground_impact:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_ground_impact;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=45} @self ~onSpawn
+
+fx_sunnova_blast:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=8} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_impact_ground_god:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_impact_ground_1;lockpitch=true;scale=5} @self ~onSpawn
+  - state{s=skills;sp=1} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_4;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_5;np=bone;delay=7} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_6;np=bone;delay=9} @self ~onSpawn
+  - changepart{m=fx_sunnova_impact_ground_1;p=bone;nm=fx_sunnova_impact_ground_7;np=bone;delay=11} @self ~onSpawn
+  - remove{delay=13} @self ~onSpawn
+
+fx_ground_impact_god:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_ground_impact;lockpitch=true;scale=5} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=45} @self ~onSpawn
+
+fx_sunnova_blast_god:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=15} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_blast_god_sun:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=15} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+celestial_fist:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=celestial_fist;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+
+celestial_fist_god:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=celestial_fist;lockpitch=true;scale=1.2} @self ~onSpawn
+  - state{s=skills_god;sp=1.2} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=32} @self ~onSpawn
+
+fx_sunnova_flash_1:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_flash_1;lockpitch=true;scale=7} @self ~onSpawn
+  - state{s=dash_1} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - effect:particlesphere{particle=redstone;color=#fbff00;radius=2;amount=50;hS=1;vS=0.5;repeat=10;repeatInterval=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_7;np=bone;delay=6} @self ~onSpawn
+  - remove{delay=7} @self ~onSpawn
+
+fx_sunnova_flash_2:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_flash_1;lockpitch=true;scale=7} @self ~onSpawn
+  - state{s=dash_2} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - effect:particlesphere{particle=redstone;color=#fbff00;radius=2;amount=50;hS=1;vS=0.5;repeat=10;repeatInterval=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_7;np=bone;delay=6} @self ~onSpawn
+  - remove{delay=7} @self ~onSpawn
+
+fx_sunnova_flash_3:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_flash_1;lockpitch=true;scale=7} @self ~onSpawn
+  - state{s=dash_3} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - effect:particlesphere{particle=redstone;color=#fbff00;radius=2;amount=50;hS=1;vS=0.5;repeat=10;repeatInterval=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_7;np=bone;delay=6} @self ~onSpawn
+  - remove{delay=7} @self ~onSpawn
+
+fx_sunnova_flash_4:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_flash_1;lockpitch=true;scale=7} @self ~onSpawn
+  - state{s=dash_4} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - effect:particlesphere{particle=redstone;color=#fbff00;radius=2;amount=50;hS=1;vS=0.5;repeat=10;repeatInterval=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_7;np=bone;delay=6} @self ~onSpawn
+  - remove{delay=7} @self ~onSpawn
+
+fx_sunnova_flash_5:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_flash_1;lockpitch=true;scale=7} @self ~onSpawn
+  - state{s=dash_5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - effect:particlesphere{particle=redstone;color=#fbff00;radius=2;amount=50;hS=1;vS=0.5;repeat=10;repeatInterval=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_2;np=bone;delay=1} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_3;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_4;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_5;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_6;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=fx_sunnova_flash_1;p=bone;nm=fx_sunnova_flash_7;np=bone;delay=6} @self ~onSpawn
+  - remove{delay=7} @self ~onSpawn
+
+sunnova_shadow:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_shadow;lockpitch=true} @self ~onSpawn
+  - state{s=skills_dash} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=30} @self ~onSpawn
+
+sunnova_shadow_stand:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_shadow;lockpitch=true} @self ~onSpawn
+  - state{s=skills;sp=0.5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+fx_sunnova_blast_god_1:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=dash_1} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_blast_god_2:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=dash_2} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_blast_god_3:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=dash_3} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_blast_god_4:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=dash_4} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+fx_sunnova_blast_god_5:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=2} @self ~onSpawn
+  - state{s=dash_5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn
+
+sunnova_haki:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=haki;lockpitch=true;scale=1} @self ~onSpawn
+  - state{s=skill;sp=0.5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=150} @self ~onSpawn
+
+sunnova_transformation:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sunnova_transformation;lockpitch=true} @self ~onSpawn
+  - state{s=transformation;sp=0.5} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=120} @self ~onSpawn
+
+God_of_Sun:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+  Skills:
+  - model{mid=sun_god;n=false} @self ~onSpawn
+  - state{s=idle} @self ~onSpawn
+
+Sun_God_Fist_Slash_1:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sun_god_fist_slash_1;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=slash_1;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+Sun_God_Fist_Slash_2:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sun_god_fist_slash_1;lockpitch=true;scale=4} @self ~onSpawn
+  - state{s=slash_2;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+Sun_God_Fist_Slash_3:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=sun_god_fist_slash_1;lockpitch=true;scale=5} @self ~onSpawn
+  - state{s=slash_3;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=sun_god_fist_slash_1;p=bone;nm=sun_god_fist_slash_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+VFX_Haki:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=vfx_haki_1;lockpitch=true;scale=5} @self ~onSpawn
+  - state{s=skill;speed=0.7} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_2;np=bone;delay=2} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_3;np=bone;delay=3} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_4;np=bone;delay=4} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_5;np=bone;delay=5} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_6;np=bone;delay=6} @self ~onSpawn
+  - changepart{m=vfx_haki_1;p=bone;nm=vfx_haki_7;np=bone;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+fx_sunnova_blast_god_ult:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=fx_sunnova_blast;lockpitch=true;scale=3} @self ~onSpawn
+  - state{s=skills} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=12} @self ~onSpawn

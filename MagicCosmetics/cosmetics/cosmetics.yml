@@ -1,0 +1,17 @@
+cosmetics:
+  hat1:
+    permission: cosmetics.hat1
+    item:
+      display: '&bSun God'
+      item-adder: sun_god
+      material: COAL
+      lore:
+      - ''
+      - '&6Nikaaaa!!!!!'
+      unbreakable: true
+      glow: true
+      hide-attributes: false
+    colored: false
+    hide-menu: false
+    type: HAT
+    overlaps: true

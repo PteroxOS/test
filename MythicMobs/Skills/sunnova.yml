@@ -1,0 +1,390 @@
+# Shining #
+Shining:
+  Cooldown: 10
+  Skills:
+  - onDamaged{auraName=Shining_aura;c=1;oH=Shining_SKILL;cE=false} @self
+
+Shining_SKILL:
+  Skills:
+  - sound{sound=entity.breeze.inhale;volume=2;pitch=1} @self
+  - sound{sound=particle.soul_escape;volume=2;pitch=1} @self
+  - particles{p=dust_color_transition;color1=#ced50c;color2=#e87700;amount=30;hS=0.4;vS=0.5;y=1;size=0.6;speed=0;repeat=15;repeati=5} @self
+  - particles{p=dust_color_transition;color1=#ced50c;color2=#e87700;amount=30;hS=0.4;vS=0.5;y=1;size=0.6;speed=0;repeat=15;repeati=5} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=20;level=2;hasParticles=false} @self
+  - potion{type=SPEED;duration=20;level=1;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=20;level=5;hasParticles=false} @self
+
+# Sun Fist Slash #
+  
+Sun_Fist_Slash:
+  Conditions:
+  - crouching false
+  - hasaurastacks{auraName=Sun_God} castinstead Sun_God_Fist
+  Skills:
+  - skill{s=Sun_Fist_Slash_1}
+  
+Sun_Fist_Slash_1:
+  Skills:
+  - effect:sound{s=sunnova_sounds:fann.sunova_punch;volume=1;pitch=1} @self
+  - summon{type=Sun_Fist_Slash_1;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=0;y=-0.2;sideOffset=-1;lockpitch=true}
+  - totem{md=2;c=1;oH=Sun_Fist_Slash_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=0.7;lockpitch=true}
+  - delay 5
+  - summon{type=Sun_Fist_Slash_2;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=0;y=-0.2;sideOffset=1;lockpitch=true}
+  - totem{md=2;c=1;oH=Sun_Fist_Slash_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=0.7;lockpitch=true}
+
+
+Sun_Fist_Slash_DAMAGE_D:
+  Skills:
+  - skill{s=Sun_Fist_Slash_DAMAGE} @EntitiesNearOrigin{r=3}
+
+Sun_Fist_Slash_DAMAGE:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - summon{type=VFX_Impact_Sunnova;amount=1;radius=0;yRadius=0;onSurface=true} 
+  - damage{a=6;pkb=true;hnp=true;hp=true}
+
+# Sunnova Dash #
+
+Sunnova_Dash:
+  Conditions:
+  - hasaurastacks{auraName=Sun_God} castinstead Sun_God_Kaminari
+  - crouching false
+  Skills:
+  - effect:sound{s=sunnova_sounds:fann.sunnova_dash;volume=1;pitch=1} @self
+  - hidefromplayers{d=50} @PIR{r=100}
+  - potion{type=INVISIBILITY;duration=10;level=50;hasParticles=false} @self
+  - lunge{velocity=3;velocityY=0.1} @forward{f=12;y=0.1;lockpitch=true}
+  - delay 1
+  - summon{type=fx_sunnova_dashess;amount=1;radius=0;yRadius=0;onSurface=true} @forward{forward=3;yoffset=0.4;lockpitch=true}
+  - summon{type=fx_sunnova_thunder;amount=1;radius=0;yRadius=0;onSurface=true;delay=3} @forward{forward=1;yoffset=0.4;lockpitch=true}
+  - summon{type=fx_sunnova_thunder_small;amount=1;radius=0;yRadius=0;onSurface=true;delay=1} @forward{forward=1;yoffset=0.4;lockpitch=true}
+  - effect:particles{particle=flash;hS=1;vS=0;amount=1;size=1;y=1;speed=1} @self
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ffe478;repeat=6;repeatInterval=6} @self ~onSpawn
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ba6156;repeat=6;repeatInterval=6} @self ~onSpawn
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ffe478;repeat=6;repeatInterval=6} @Left{sideOffset=-1}
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ba6156;repeat=6;repeatInterval=6} @Right{sideOffset=1}
+
+# Celestial Fist #
+
+Celestial_Fist:
+  Conditions:
+  - hasaura{n=Sun_God} false
+  - hasaurastacks{auraName=Celestial_Fist_aura} castinstead Celestial_Fist_SKILL
+  Skills:
+  - Aura{auraName=Celestial_Fist_aura;interval=1;duration=5} @self
+
+Celestial_Fist_SKILL:
+  Conditions:
+  - onground true
+  Skills:
+  - potion{type=SLOW;duration=115;level=0;hasParticles=false} @self
+  - effect:sound{s=sunnova_sounds:fann.sunnova_impact;volume=1;pitch=1} @self
+  - projectile{bulletType=MOB;mob=celestial_fist;onHitBlockSkill=Celestial_Fist_D;v=10;i=1;hR=1;vR=1;mr=30;hnp=true;hO=0;sE=false;sB=true;hs=false;hfs=0;sfo=0;syo=4;tyo=0} @Forward{f=6;y=-4.4;lockpitch=true}
+
+Celestial_Fist_D:
+  Skills:
+  - summon{type=fx_ground_impact;amount=1;radius=0;yRadius=0;onSurface=true} @ProjectileForward{f=5;y=4.1}
+  - summon{type=fx_sunnova_impact_ground;amount=1;radius=0;yRadius=0;onSurface=true} @ProjectileForward{f=5;y=4.4}
+  - summon{type=fx_sunnova_blast;amount=1;radius=0;yRadius=0;onSurface=true} @ProjectileForward{f=5;y=4.2}
+  - effect:particles{particle=flash;amount=1;hS=0;vS=0;y=0.2;speed=0.2;forwardOffset=0;sideOffset=0} @ProjectileForward{f=2;y=1.8}
+  - skill{s=Celestial_Fist_HIT} @EntitiesNearOrigin{r=8}
+
+Celestial_Fist_HIT:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=Celestial_Fist_HIT;duration=5}
+  - damage{a=10;pkb=true;hnp=true;hp=true;delay=1}
+  - throw{velocity=5;velocityY=-12}
+  - delay 5
+  - potion{type=SLOW;duration=20;level=5;hasParticles=false}
+
+# Sun God Flash #
+
+Sun_God_Flash:
+  Skills:
+  - potion{type=INVISIBILITY;duration=50;level=2;hasParticles=false} @self
+  - hidefromplayers{d=60} @self
+  - summon{type=fx_sunnova_blast;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=sunnova_shadow_stand;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - stun{duration=40} @self
+  - effect:sound{s=sunnova_sounds:fann.sunnova_celestial_fist;volume=3;pitch=1} @self
+  - skill{s=Sun_Flash}
+  - delay 20
+  - skill{s=Sun_Flash}
+  - delay 30
+  - lunge{velocity=2;velocityY=0.6} @forward{f=-10;y=3.4;lockpitch=true}
+  - delay 10
+  - stun{duration=20} @self
+  - delay 1
+  - summon{type=celestial_fist_god;amount=1;radius=0;yRadius=0;onSurface=true} @forward{forward=-1.5;y=0.1;lockpitch=true}
+  - delay 25
+  - onDamaged{auraName=landresists;d=20;cE=true} @self
+  - skill{s=Sun_Flash_DAMAGE_FINAL} @EIR{r=12}
+  - summon{type=fx_ground_impact_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=10;y=0.1;lockpitch=true}
+  - summon{type=fx_sunnova_impact_ground_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=10;y=0.1;lockpitch=true}
+  - summon{type=fx_sunnova_blast_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=10;y=0.1;lockpitch=true}
+
+Sun_Flash:
+  Skills:
+
+  - summon{type=sunnova_shadow;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_flash_1;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_blast_god_1;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - skill{s=Sun_Flash_DAMAGE} @EIR{r=8}
+  - delay 5
+  - summon{type=fx_sunnova_flash_2;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_blast_god_2;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - skill{s=Sun_Flash_DAMAGE} @EIR{r=8}
+  - delay 5
+  - summon{type=fx_sunnova_flash_3;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_blast_god_3;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - skill{s=Sun_Flash_DAMAGE} @EIR{r=8}
+  - delay 5
+  - summon{type=fx_sunnova_flash_4;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_blast_god_4;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - skill{s=Sun_Flash_DAMAGE} @EIR{r=8}
+  - delay 5
+  - summon{type=fx_sunnova_flash_5;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=fx_sunnova_blast_god_5;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - skill{s=Sun_Flash_DAMAGE} @EIR{r=8}
+
+Sun_Impact:
+  Skills:
+  - summon{type=fx_ground_impact_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=5;y=0}
+  - summon{type=fx_sunnova_impact_ground_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=5;y=0}
+  - summon{type=fx_sunnova_blast_god;amount=1;radius=0;yRadius=0;onSurface=true} @Forward{f=5;y=0}
+
+Sun_Flash_DAMAGE:
+  TargetConditions:
+  - entitytype{t=armorstands} false
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - damage{a=3;pkb=true;delay=2}
+  - stun{d=20}
+  - potion{type=BLINDNESS;duration=20;level=5;hasParticles=false}
+  
+Sun_Flash_DAMAGE_FINAL:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - damage{a=10;pkb=true;hnp=true;hp=true;delay=1}
+  - throw{velocity=0;velocityY=1}
+  - delay 5
+  - potion{type=SLOW;duration=20;level=50;hasParticles=false}
+
+# Sun God Transformation #
+
+Sun_God_Transformation:
+  Skills:
+  - summon{type=fx_sunnova_blast_god_sun;amount=1;radius=0;yRadius=0;onSurface=true;repeat=5;repeatinterval=15} @self
+  - effect:sound{s=sunnova_sounds:fann.sunnova_transformation;volume=1;pitch=1} @self
+  - stun{duration=150} @self
+  - potion{type=INVISIBILITY;duration=120;level=2;hasParticles=false} @self
+  - hidefromplayers{d=120} @self
+  - effect:particles{particle=block_crack;data=1;amount=30;hS=2;vS=0.5;speed=0.1;spread=true} @self
+  - totem{md=2;c=1;oH=Sun_God_DAMAGE;hnp=true;hp=true;hR=6;vR=5;i=1} @EIR{radius=10}
+  - summon{type=fx_sunnova_blast_god_sun;amount=1;radius=0;yRadius=0;onSurface=true;repeat=5;repeatinterval=15;delay=10} @self
+  - summon{type=sunnova_haki;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - summon{type=sunnova_transformation;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - delay 120
+  - summon{type=fx_sunnova_blast_god_sun;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  - effect:particles{particle=flash;amount=5;hS=1.2;vS=0;y=0.2;speed=0.2;forwardOffset=0;sideOffset=0} @self
+  - Aura{auraName=Sun_God;interval=1;duration=600} @self
+  - particles{p=dust_color_transition;color1=#ced50c;color2=#e87700;amount=30;hS=0.4;vS=0.5;y=1;size=0.6;speed=0;repeat=130;repeati=5} @self
+  - particles{p=dust_color_transition;color1=#ced50c;color2=#e87700;amount=30;hS=0.4;vS=0.5;y=1;size=0.6;speed=0;repeat=130;repeati=5} @self
+  - orbital{bulletType=MOB;mob=God_of_Sun;hr=1;vr=1;hp=false;hnp=false;r=0;points=1;i=1;duration=600;oy=1.3;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=600;level=2;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=600;level=2;hasParticles=false} @self
+  - potion{type=SPEED;duration=600;level=2;hasParticles=false} @self
+
+Sun_God_DAMAGE:
+  Skills:
+  - damage{a=10;pkb=true;hnp=true;hp=true;repeat=20;repeatinterval=5}
+  - blockwave{duration=40;radius=10;radiusY=5;velocity=1;shape=sphere;hidesourceblock=false} @origin
+  - potion{type=SLOW;duration=40;level=50;hasParticles=false}
+  - potion{type=DARKNESS;duration=40;level=50;hasParticles=false}
+
+# Sun God Fist #
+
+Sun_God_Fist:
+  Cooldown: 0.4
+  Conditions:
+  - crouching false
+  Skills:
+  - skill{s=Sun_God_Fist_1}
+  - skill{s=Sun_God_Fist_2}
+  - skill{s=Sun_God_Fist_3}
+  - skill{s=Sun_God_Fist_4}
+
+Sun_God_Fist_1:
+  Conditions:
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=1} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=2} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=3} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=4} false
+  Skills:
+  - Aura{auraName=Sun_God_Fist_Stack;duration=60;maxStacks=4;delay=1} @self
+  - totem{md=2;c=1;oH=Sun_God_Fist_DAMAGE1_D;hnp=true;hp=true;hR=4;vR=4;i=1} @forward{f=1;lockpitch=true}
+  - effect:sound{s=sunnova_sounds:fann.sunnova_fist_god;volume=1;pitch=1} @self
+  - summon{type=Sun_God_Fist_Slash_1;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=0;y=-0.2;sideOffset=-1;lockpitch=true}
+
+Sun_God_Fist_2:
+  Conditions:
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=1} true
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=2} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=3} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=4} false
+  Skills:
+  - Aura{auraName=Sun_God_Fist_Stack;duration=60;maxStacks=4;delay=1} @self
+  - totem{md=2;c=1;oH=Sun_God_Fist_DAMAGE1_D;hnp=true;hp=true;hR=4;vR=4;i=1} @forward{f=1;lockpitch=true}
+  - effect:sound{s=sunnova_sounds:fann.sunnova_fist_god;volume=1;pitch=1} @self
+  - summon{type=Sun_God_Fist_Slash_2;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=0;y=-0.2;sideOffset=1;lockpitch=true}
+
+Sun_God_Fist_3:
+  Conditions:
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=1} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=2} true
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=3} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=4} false
+  Skills:
+  - Aura{auraName=Sun_God_Fist_Stack;duration=60;maxStacks=4;delay=1} @self
+  - totem{md=2;c=1;oH=Sun_God_Fist_DAMAGE2_D;hnp=true;hp=true;hR=4;vR=4;i=1} @forward{f=1;lockpitch=true}
+  - lunge{velocity=0;velocityY=0.7;repeatinterval=1} @self
+  - effect:sound{s=sunnova_sounds:fann.sunnova_fist_god_2;volume=1;pitch=1} @self
+  - summon{type=Sun_God_Fist_Slash_3;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=-0.5;y=1.3;sideOffset=0;lockpitch=true}
+
+Sun_God_Fist_4:
+  Conditions:
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=1} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=2} false
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=3} true
+  - hasaurastacks{auraName=Sun_God_Fist_Stack;stacks=4} false
+  Skills:
+  - auraremove{aura=Sun_God_Fist_Stack;delay=1} @self
+  - totem{md=2;c=1;oH=Sun_God_Fist_DAMAGE3_D;hnp=true;hp=true;hR=4;vR=4;i=1} @forward{f=1;lockpitch=true}
+  - summon{type=VFX_Haki;amount=1;radius=0;yRadius=0;onSurface=true} @forward{f=1.2;y=-3;sideOffset=0;lockpitch=true}
+  - lunge{velocity=1;velocityY=-2;repeatinterval=1} @self
+  - effect:sound{s=sunnova_sounds:fann.sunnova_god_impact;volume=1;pitch=1} @self
+  - delay 4
+  - summon{type=fx_sunnova_blast_god_ult;amount=1;radius=0;yRadius=0;onSurface=true} @forward{forward=1;yoffset=0.5}
+
+Sun_God_Fist_DAMAGE1_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  - entitytype{t=armorstands} false
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - summon{type=VFX_Impact_Sunnova;amount=1;radius=0;yRadius=0;onSurface=true} 
+  - damage{a=6;pkb=true;hnp=true;hp=true}
+
+Sun_God_Fist_DAMAGE2_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  - entitytype{t=armorstands} false
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - throw{velocity=0;velocityY=5}
+  - damage{a=6;pkb=true;hnp=true;hp=true}
+
+Sun_God_Fist_DAMAGE3_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  - entitytype{t=armorstands} false
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - throw{velocity=-1;velocityY=-5}
+  - damage{a=6;pkb=true;hnp=true;hp=true}
+  - potion{type=SLOW;duration=20;level=5;hasParticles=false}
+
+# Sun God Kaminari #
+
+Sun_God_Kaminari:
+  Cooldown: 4
+  Skills:
+  - effect:sound{s=sunnova_sounds:fann.sunnova_god_thunder;volume=1;pitch=1} @self
+  - delay 2
+  - hidefromplayers{d=50} @PIR{r=100}
+  - potion{type=INVISIBILITY;duration=10;level=50;hasParticles=false} @self
+  - lunge{velocity=3;velocityY=0.1} @forward{f=12;y=0.1;lockpitch=true}
+  - delay 1
+  - summon{type=fx_sunnova_dashess;amount=1;radius=0;yRadius=0;onSurface=true} @forward{forward=3;yoffset=0.4;lockpitch=true}
+  - summon{type=fx_sunnova_thunder;amount=1;radius=0;yRadius=0;onSurface=true;delay=3} @forward{forward=1;yoffset=0.4;lockpitch=true}
+  - summon{type=fx_sunnova_thunder_small;amount=1;radius=0;yRadius=0;onSurface=true;delay=1} @forward{forward=1;yoffset=0.4;lockpitch=true}
+  - effect:particles{particle=flash;hS=1;vS=0;amount=1;size=1;y=1;speed=1} @self
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ffe478;repeat=6;repeatInterval=6} @self ~onSpawn
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ba6156;repeat=6;repeatInterval=6} @self ~onSpawn
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ffe478;repeat=6;repeatInterval=6} @Left{sideOffset=-1}
+  - particles{p=redstone;amount=20;hS=0.5;vS=0.5;speed=0.1;spread=true;color=#ba6156;repeat=6;repeatInterval=6} @Right{sideOffset=1}
+  - delay 10
+  - leap{velocity=200} @forward{f=2;y=3;lockpitch=true}
+  - skill{s=Sun_God_Kaminari_RING} @selflocation
+  - skill{skill=Sun_God_Kaminari_UP} @EIR{radius=8}
+  - delay 10
+  - potion{type=LEVITATION;duration=65;level=-1;hasParticles=false} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=80;level=2;hasParticles=false} @self
+  - skill{s=Sun_God_Kaminari_SPHERE} @selflocation
+  - delay 65
+  - lunge{velocity=1;velocityY=-2;repeatinterval=1} @self
+  - onDamaged{auraName=landresist;d=40;cE=true} @self
+  - delay 5
+  - skill{skill=Sun_God_Kaminari_DAMAGE} @EIR{radius=8}
+  - skill{s=Sun_God_Kaminari_RING} @selflocation
+  - summon{type=fx_ground_impact;amount=1;radius=0;yRadius=0;onSurface=true} @selfLocation
+  - summon{type=fx_sunnova_blast_god;amount=1;radius=0;yRadius=0;onSurface=true} @selfLocation
+
+Sun_God_Kaminari_SPHERE:
+  Skills:
+  - sound{sound=entity.breeze.inhale;volume=0.8;pitch=0.7} @self
+  - sound{sound=particle.soul_escape;volume=0.8;pitch=1} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=0.5;size=0.55;amount=20;y=0.6;repeat=10;repeati=5;delay=9} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=1;size=0.55;y=0.6;amount=40;repeat=10;repeati=5;delay=8} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=1.5;size=0.55;y=0.6;amount=60;repeat=10;repeati=5;delay=7} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=2;size=0.55;y=0.6;amount=80;repeat=10;repeati=5;delay=6} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=2.5;size=0.55;y=0.6;amount=100;repeat=10;repeati=5;delay=5} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=3;size=0.55;y=0.6;amount=120;repeat=10;repeati=5;delay=4} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=3.5;size=0.55;y=0.6;amount=140;repeat=10;repeati=5;delay=3} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=4;size=0.55;y=0.6;amount=170;repeat=10;repeati=5;delay=2} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=4.5;size=0.55;y=0.6;amount=200;repeat=10;repeati=5;delay=1} @self
+  - effect:particlesphere{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=5;size=0.55;y=0.6;repeat=10;repeati=5;amount=230} @self
+
+Sun_God_Kaminari_RING:
+  Skills:
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=1;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=2;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=1}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=3;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=2}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=4;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=3}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=5;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=4}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=6;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=5}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=6.5;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=6}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=7;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=7}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=7.4;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=8}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=7.7;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=10}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=7.9;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=12}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=8;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=15}
+  - effect:particlering{p=dust_color_transition;color1=#ced50c;color2=#e87700;radius=8.1;points=80;amount=1;hS=0;vS=0;y=0.1;size=0.75;delay=18}
+
+Sun_God_Kaminari_UP:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  - entitytype{t=armorstands} false
+  Skills:
+  - pull{velocity=5;repeat=2;repeatinterval=2}
+  - throw{velocity=5;velocityY=50}
+  - potion{type=LEVITATION;duration=65;level=-1;hasParticles=false}
+
+Sun_God_Kaminari_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=ATTACK_CD;duration=2} @self
+  - damage{a=10;pkb=true;hnp=true;hp=true;delay=1}
+  - throw{velocity=0;velocityY=1}
+  - delay 5
+  - potion{type=SLOW;duration=20;level=50;hasParticles=false}
